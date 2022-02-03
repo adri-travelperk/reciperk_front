@@ -4,8 +4,7 @@ import { Grid, Paper, Typography, List, ListItem, ListItemText, Divider, TextFie
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 
 
-function RecipeListItem({ recipe }) {
-    //const shownIngredients = recipe.ingredients.length > 3 ? recipe.ingredients.slice(0, 3).concat({ id: recipe.ingredients.length, name: '...' }) : recipe.ingredients
+export function RecipeListItem({ recipe }) {
     const shownIngredients = recipe.ingredients
     const navigate = useNavigate()
     const navigateToRecipe = React.useCallback(() => navigate('/recipes/'.concat(recipe.id), { replace: true }), [navigate]);

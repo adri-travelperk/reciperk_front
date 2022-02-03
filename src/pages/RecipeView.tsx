@@ -15,7 +15,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 
 
-function RecipeName({ name }) {
+export function RecipeName({ name }) {
   return (
     <>
       <Typography component='h6' variant='h6' color='primary' gutterBottom>Name</Typography>
@@ -26,7 +26,7 @@ function RecipeName({ name }) {
 }
 
 
-function RecipeDescription({ description }) {
+export function RecipeDescription({ description }) {
   return (
     <>
       <Typography component='h6' variant='h6' color='primary' gutterBottom>Description</Typography>
@@ -36,7 +36,7 @@ function RecipeDescription({ description }) {
 }
 
 
-function Ingredients({ ingredients }) {
+export function Ingredients({ ingredients }) {
   const ingredientList = ingredients.map((ingredient, idx) => <ListItem key={idx}><ListItemText>{ingredient.name}</ListItemText></ListItem>)
 
   return (
